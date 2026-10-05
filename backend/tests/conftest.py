@@ -27,7 +27,7 @@ with test_admin_engine.begin() as connection:
 isolated_test_url = make_url(test_database_url).update_query_dict(
     {"options": f"-csearch_path={test_schema_name}"}
 )
-os.environ["DATABASE_URL"] = str(isolated_test_url)
+os.environ["DATABASE_URL"] = isolated_test_url.render_as_string(hide_password=False)
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from app.main import Base, app, engine as app_engine, get_db  # noqa: E402
