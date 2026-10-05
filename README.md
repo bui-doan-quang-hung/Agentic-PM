@@ -128,5 +128,7 @@ PASS / FAIL
 
 Workflow: [.github/workflows/ci.yml](.github/workflows/ci.yml). It does not
 deploy, publish images, use repository secrets, or modify repository settings.
-The workflow is configured locally but GitHub Actions has not been run remotely
-from this workspace; see [delivery-report.md](delivery-report.md).
+Latest GitHub Actions run [#2](https://github.com/bui-doan-quang-hung/Agentic-PM/actions/runs/37291814797)
+passed both backend (17 pytest tests) and frontend jobs. See
+[delivery-report.md](delivery-report.md) for verification details and the
+historical first-run failure/root cause.
